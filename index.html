@@ -9,14 +9,39 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link href="styles.css" rel="stylesheet" />
     <!--style----->
     <style>
-      body {
-        font-family: poppins;
+      .graphic-designs-section h2{
+        text-align: center;
+        font-family: calibri;
+        margin-top: 67px;
       }
-      
-  
+      .design-carousel {
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.design-carousel img {
+  height: 220px; /* Set a constant height for all images */
+  width: auto;
+  margin-right: 10px; /* Add margin between images */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for visual effect */
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+@keyframes moveCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.design-carousel.animate {
+  animation: moveCarousel 26s linear infinite; /* Adjust the timing as needed */
+}
+
 </style>
     </style>
     <!--using FontAwesome---------------->
@@ -29,101 +54,127 @@
     <section>
       <!--navigation------------------------->
       <nav>
-        <!--logo-->
-        <a href="#" class="logo">Apoorva</a>
-      <!--menu-->
-      <ul>
-        <li><a href="#">Home</a></li>
+        <!-- logo -->
        
-        
-      </ul>
-      <!--bars--------------->
-      <div class="toggle"></div>
-    </nav>
-    
+        <!-- menu -->
+        <!-- <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="acheivements.html">About me</a></li>
+            <li><a href="help.html" id="helpLink">Help</a></li>
+            <li><a href ="#section2">Services</a></li>
+          </ul>
+        </div>
+        <div class="toggle">
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </div> -->
+      </nav>
     </section>
+   
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+          navLinks.style.right = "0";
+      }
+      function hideMenu() {
+          navLinks.style.right = "-200px";
+      }
+  </script>
     <!--text----------------------->
     <div class="text-container">
       <p>Hello,</p>
       <p>I&#8217m Apoorva</p>
       <p>Student at  <br/> KLS Gogte Institute of Technology</p>
-      <button class="hire-btn">Hire me</button>
-      <button class="down-cv">Join Team</button>
+      <a href="https://www.linkedin.com/in/apoorva-vanshakruthmath-1932b1250/" target="_blank" rel="noopener noreferrer">
+        <button class="hire-btn">Connect</button>
+    </a>
+     
+      <a href="mailto:apoorvavanshakruthmath@gmail.com">
+      <button class="down-cv">Contact</button></a>
     </div>
 
     <!--model---------------------->
     <img class="model" src="Port.png" />
     <div class="about-container">
       <!--img-->
-      <img src="we.jpg"/>
+      <img src="profile.jpg"/>
       <!--about-me-text-->
       <div class="about-text">
         <p>About Me</p>
-        <p>Front-end developer and Student</p>
+        <p>Graphic Designer|Frontend Developert</p>
         <p>
         Highly motivated student with desire to take on new challenges.Strong work ethic,adaptability and exceptional interpersonal skills.Adept at working effectively unsupervised and quickly mastering new skills.
         </p>
-       <a href="acheivements.html">
-
-         <button>Achievements</button>
-        </a>
+       
         
-        <a href="Apoorva_Vanshakruthmath_Resume.jpg">
+        <a href="apoorvavanshakruthmath@gmail.com.jpg">
         <button>View-CV</button>
         </a>
         
       </div>
     </div>
-    <!--services-container---------------------------->
-    <div class="services">
-      <!--text-->
-      <div class="services-text">
-        <p>Services</p>
-        <p>Your at the right place.</p>
-        <p>
-          We are providing the best services in software design and development requires a combination of understanding our clients’ needs, staying up-to-date with technology, focusing on quality and prioritizing timely delivery.
-        </p>
-      </div>
-      <div class="box-container">
-        <!--1------------->
-        <div class="box-1">
-          <span>1</span>
-          <p class="heading">Web Design</p>
-          <p class="detials">
-            I am confident in my ability to create top-notch web designs that not only look good but also deliver a seamless user experience. I am always eager to take on new challenges 
-          </p>
-          <a href="webdesign.html">
-          <button>Read more</button>
-        </a>
-        </div>
-        <!--2------------->
-        <div class="box-2">
-          <span>2</span>
-          <p class="heading">Web Development</p>
-          <p class="detials">
-            I specialize in developing and maintaining web applications using various technologies such as HTML, CSS, JavaScript, and PHP. I am well-versed in using different frameworks 
-          </p>
-          <a href="webdev.html">
-          <button>Read more</button></a>
-        </div>
-        <!--3------------->
-        <div class="box-3">
-          <span>3</span>
-          <p class="heading">App Design</p>
-          <p class="detials">
-            It's about understanding the needs of the user and creating a solution that meets those needs in the most intuitive and user-friendly way possible. This requires a 
-          </p>
-          <a href="appdes.html">
-          <button>Read more</button>
-        </a>
-        </div>
-
+    <div class="graphic-designs-section">
+      <h2>Recent Projects</h2>
+      <div class="design-carousel">
+        <img src="landing.png" alt="Graphic Design 3">
+        <img src="eid.png" alt="Graphic Design 1">
+        <img src="A4 - 2.png" alt="Graphic Design 1">
+        <img src="A4 - 1.jpg" alt="Graphic Design 2">
+        <img src="2024.png" alt="Graphic Design 2">
+        <img src="MacBook Air - 1.png" alt="Graphic Design 2">
+        <img src="25th.png" alt="Graphic Design 3">
+        <img src="apoorvaVanshakruthmath_5.png" alt="Graphic Design 3">
+        <img src="A4 - 12.jpg" alt="Graphic Design 3">
+        <img src="projects.png" alt="Graphic Design 3">
+        <img src="MacBook Air - 2.jpg" alt="Graphic Design 3">
+       
+        
+        <!-- Add more images as needed -->
       </div>
     </div>
-
-
-
-
+    
+    <section id="section2">
+      <div class="services">
+          <!--text-->
+          <div class="services-text">
+              <p>Services</p>
+              <p>Your at the right place.</p>
+              <p>
+                "I excel in providing top-notch software design and development services, leveraging a profound understanding of clients’ needs, staying abreast of cutting-edge technology, emphasizing quality, and ensuring timely delivery."
+              </p>
+          </div>
+          <div class="box-container">
+              <!--1------------->
+              <div class="box-1">
+                  <span>1</span>
+                  <p class="heading">Web Design</p>
+                  <p class="detials">
+                      I am confident in my ability to create top-notch web designs that not only look good but also deliver a seamless user experience. I am always eager to take on new challenges.
+                  </p>
+              </div>
+              <!--2------------->
+              <div class="box-2">
+                  <span>2</span>
+                  <p class="heading">Web Development</p>
+                  <p class="detials">
+                      I specialize in developing and maintaining web applications using various technologies such as HTML, CSS, JavaScript and Reactjs. I am well-versed in using different frameworks/Libraries.
+                  </p>
+              </div>
+              <!--3------------->
+              <div class="box-3">
+                  <span>3</span>
+                  <p class="heading">Graphic Design</p>
+                  <p class="detials">
+                      I excel in graphic design, where my proficiency extends beyond creating visually appealing designs to understanding the unique needs of clients.
+                  </p>
+              </div> <!-- Missing closing tag for box-3 -->
+          </div>
+      </div>
+  </section>
+  
     <!--if you have any project in your mind contact me-->
     <div class="Feedback">
       <div class="Feedback">
@@ -133,6 +184,9 @@
         </a>
       </div>
     </div>
+ 
+
+
     <!--footer--------------->
     <footer>
       <!--heading-->
@@ -147,15 +201,18 @@
       </div>
       <!--copyright-->
       <p class="copyright">
-        Copyright by Goin-To Internet
+        Copyright by ApoorvaVanshakruthmath
       </p>
     </footer>
-    <!--social-attach-bar-->
-    <div class="social">
-      <a href="https://twitter.com/apoorvaV07"><i class="fab fa-twitter"></i></a>
-      <a href=><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/apoorva-vanshakruthmath-1932b1250/"><i class="fab fa-linkedin"></i></a>
-    </div>
-
+   
+    <script>
+      // JavaScript to add the 'animate' class to the carousel container
+      // This triggers the animation
+      document.addEventListener("DOMContentLoaded", function() {
+        const carousel = document.querySelector('.design-carousel');
+        carousel.classList.add('animate');
+      });
+    </script>
+    
   </body>
 </html>
